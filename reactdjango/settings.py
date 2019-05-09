@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['research-click.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
   'sampleapp',
+
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
@@ -51,27 +52,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'reactdjango.urls'
-here = lambda * x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 
-PROJECT_ROOT = here("..")
-# root() gives us file paths from the root of the system to whatever
-# folder(s) we pass it starting at the parent directory of the current file.
-root = lambda * x: os.path.join(os.path.abspath(PROJECT_ROOT), *x)
-import os.path
-PROJECT_DIR = os.path.dirname(__file__)
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_DIR, "build"),
-    # here you can add another templates directory if you wish.
-)
 TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [
-    os.path.join(BASE_DIR, 'build'),
-    os.path.join(BASE_DIR, '../build'),
-    root('build')
-
-    ],
+    'DIRS': [os.path.join(BASE_DIR, 'build')],
     'APP_DIRS': True,
     'OPTIONS': {
       'context_processors': [
