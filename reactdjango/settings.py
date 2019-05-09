@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['research-click.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
   'sampleapp',
-
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
@@ -57,7 +56,9 @@ TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
-      os.path.join(BASE_DIR, 'build')
+    os.path.join(BASE_DIR, 'build'),
+    os.path.join(BASE_DIR, '../build'),
+
     ],
     'APP_DIRS': True,
     'OPTIONS': {
