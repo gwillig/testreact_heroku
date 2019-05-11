@@ -1,23 +1,26 @@
-import React, { Component } from 'react';
-import reactLogo from './logo-react.svg';
-import djangoLogo from './logo-django.svg';
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={reactLogo} className="App-logo" alt="React logo" />
-          <img src={djangoLogo} className="App-logo" alt="Django logo" />
-          <h1 className="App-title">Welcome to the React-Django app</h1>
-        </header>
-        <p className="App-intro">
-          I'm a blank canvas waiting for a coder's touch!
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-      </div>
-    );
-  }
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
