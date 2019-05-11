@@ -13,14 +13,14 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '463hzk*onkb4h&+j@mof$wc(20t$$l17w#(v8-6ipzq7m=$a=j'
+SECRET_KEY = '6j+tatczk+eht4g8d4pau_le4+ny#&w4e+0_$dtm%k+kgkm$uf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['research-click.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
   'sampleapp',
-  "rest_framework",
+
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
@@ -50,13 +50,13 @@ MIDDLEWARE = [
   'django.contrib.messages.middleware.MessageMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_URLCONF = 'reactdjango.urls'
-print(BASE_DIR)
+
 TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(BASE_DIR, 'build')],
+    'DIRS': [os.path.join(BASE_DIR, 'build')    ],
     'APP_DIRS': True,
     'OPTIONS': {
       'context_processors': [
